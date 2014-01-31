@@ -10,35 +10,7 @@
 # collatz_read
 # ------------
 
-class Itr :
-    def __init__ (self, r) :
-        self.r = r
-
-    def __iter__ (self) :
-        return self
-
-    def __next__ (self) :
-        s = self.r.readline()
-        if s == "" :
-            raise StopIteration()
-        return map(int, s.split())
-
-def collatz_read_1 (r) :
-    """
-    r is a reader
-    returns an iterator over a list of ints of length 2
-    """
-    return Itr(r)
-
-def collatz_read_2 (r) :
-    """
-    r is a reader
-    returns a generator over a list of ints of length 2
-    """
-    for s in r :
-        yield map(int, s.split())
-
-def collatz_read_3 (r) :
+def collatz_read (r) :
     """
     r is a reader
     returns a generator over a list of ints of length 2
@@ -101,7 +73,7 @@ def collatz_solve (r, w) :
     r is a reader
     w is a writer
     """
-    for m in collatz_read_3(r) :
+    for m in collatz_read(r) :
         i, j = list(m)
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)

@@ -20,7 +20,7 @@ To test the program:
 import io
 import unittest
 
-from Collatz import collatz_read_1, collatz_read_2, collatz_read_3, collatz_eval, collatz_print, collatz_solve, collatz_cycles
+from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, collatz_cycles
 
 # -----------
 # TestCollatz
@@ -31,26 +31,26 @@ class TestCollatz (unittest.TestCase) :
     # read
     # ----
 
-    def test_read_1 (self) :
+    def test_read (self) :
         r = io.StringIO("1 10\n")
-        m = collatz_read_1(r)
+        m = collatz_read(r)
         i, j = list(next(m))
         self.assertTrue(i ==  1)
         self.assertTrue(j == 10)
 
     def test_read_2 (self) :
-        r = io.StringIO("1 10\n")
-        m = collatz_read_2(r)
+        r = io.StringIO("3245 1451\n")
+        m = collatz_read(r)
         i, j = list(next(m))
-        self.assertTrue(i ==  1)
-        self.assertTrue(j == 10)
+        self.assertTrue(i ==  3245)
+        self.assertTrue(j == 1451)
 
     def test_read_3 (self) :
-        r = io.StringIO("1 10\n")
-        m = collatz_read_3(r)
+        r = io.StringIO("820000 999999\n")
+        m = collatz_read(r)
         i, j = list(next(m))
-        self.assertTrue(i ==  1)
-        self.assertTrue(j == 10)
+        self.assertTrue(i ==  820000)
+        self.assertTrue(j == 999999)
 
     # ----
     # eval
