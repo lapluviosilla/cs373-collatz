@@ -21,6 +21,8 @@ def collatz_read (r) :
 # collatz_eval
 # ------------
 
+cache = {}
+
 def collatz_eval (i, j) :
     """
     i is the beginning of the range, inclusive
@@ -49,10 +51,16 @@ def collatz_cycles (num) :
     calculates the cycle length for a single number
     num is the starting number to run collatz on and calculate cycle length
     """
+    global cache
     assert(num > 0)
     assert(num < 1000000)
+    orig_num = num
+    
     cycles = 1
     while(num != 1) :
+        if num in cache:
+            cycles += cache[num] - 1 # Found in cache, now just exit
+            break
         if num % 2 == 0:
             num = num >> 1
             cycles += 1
@@ -61,6 +69,7 @@ def collatz_cycles (num) :
             num = num + (num >> 1) + 1 # (3n + 1) / 2
             cycles += 2
     assert(cycles > 0)
+    cache[orig_num] = cycles
     return cycles
 
 
