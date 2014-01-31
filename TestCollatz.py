@@ -20,7 +20,7 @@ To test the program:
 import io
 import unittest
 
-from Collatz import collatz_read_1, collatz_read_2, collatz_read_3, collatz_eval, collatz_print, collatz_solve
+from Collatz import collatz_read_1, collatz_read_2, collatz_read_3, collatz_eval, collatz_print, collatz_solve, collatz_cycles
 
 # -----------
 # TestCollatz
@@ -73,6 +73,21 @@ class TestCollatz (unittest.TestCase) :
         self.assertTrue(v == 174)
 
     # -----
+    # cycles
+    # -----
+    def test_cycles_1 (self) :
+        v = collatz_cycles(4)
+        self.assertTrue(v == 3)
+
+    def test_cycles_2 (self) :
+        v = collatz_cycles(3)
+        self.assertTrue(v == 8)
+
+    def test_cycles_3 (self) :
+        v = collatz_cycles(18)
+        self.assertTrue(v == 21)
+
+    # -----
     # print
     # -----
 
@@ -80,6 +95,16 @@ class TestCollatz (unittest.TestCase) :
         w = io.StringIO()
         collatz_print(w, 1, 10, 20)
         self.assertTrue(w.getvalue() == "1 10 20\n")
+
+    def test_print2 (self) :
+        w = io.StringIO()
+        collatz_print(w, 800000, 1000000, 45)
+        self.assertTrue(w.getvalue() == "800000 1000000 45\n")
+
+    def test_print3 (self) :
+        w = io.StringIO()
+        collatz_print(w, -5, 10, 45)
+        self.assertTrue(w.getvalue() == "-5 10 45\n")
 
     # -----
     # solve
@@ -90,6 +115,18 @@ class TestCollatz (unittest.TestCase) :
         w = io.StringIO()
         collatz_solve(r, w)
         self.assertTrue(w.getvalue() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
+
+    def test_solve2 (self) :
+        r = io.StringIO("9 10\n1 20\n1 17\n")
+        w = io.StringIO()
+        collatz_solve(r, w)
+        self.assertTrue(w.getvalue() == "9 10 20\n1 20 21\n1 17 20\n")
+
+    def test_solve3 (self) :
+        r = io.StringIO("")
+        w = io.StringIO()
+        collatz_solve(r, w)
+        self.assertTrue(w.getvalue() == "")
 
 # ----
 # main
