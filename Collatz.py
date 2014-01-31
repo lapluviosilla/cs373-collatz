@@ -45,6 +45,10 @@ def collatz_eval (i, j) :
 # collatz_cycles
 # -------------
 def collatz_cycles (num) :
+    """
+    calculates the cycle length for a single number
+    num is the starting number to run collatz on and calculate cycle length
+    """
     assert(num > 0)
     assert(num < 1000000)
     cycles = 1
