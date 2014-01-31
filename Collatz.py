@@ -29,16 +29,21 @@ def collatz_eval (i, j) :
     """
     assert(i > 0)
     assert(j > 0)
-    # <your code>
-    v = 1
-    assert(v > 0)
-    return v
+    start = min(i, j)
+    end = max(i, j)
+    max_cycle_length = 1
+    for n in range(start, end+1) :
+        cycles = collatz_cycles(n)
+        if cycles > max_cycle_length: max_cycle_length = cycles 
+    assert(max_cycle_length > 0)
+    return max_cycle_length
 
 # -------------
 # collatz_cycles
 # -------------
 def collatz_cycles (num) :
     assert(num > 0)
+    assert(num < 1000000)
     cycles = 1
     while(num != 1) :
         if num % 2 == 0:
@@ -46,6 +51,7 @@ def collatz_cycles (num) :
         else:
             num = 3*num + 1
         cycles += 1
+    assert(cycles > 0)
     return cycles
 
 
