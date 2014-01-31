@@ -63,6 +63,21 @@ def collatz_eval (i, j) :
     return v
 
 # -------------
+# collatz_cycles
+# -------------
+def collatz_cycles (num) :
+    assert(num > 0)
+    cycles = 1
+    while(num != 1) :
+        if num % 2 == 0:
+            num = num // 2
+        else:
+            num = 3*num + 1
+        cycles += 1
+    return cycles
+
+
+# -------------
 # collatz_print
 # -------------
 
