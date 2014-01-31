@@ -1,0 +1,95 @@
+commit ec8459248efa1e4623899e93557942dc1c7a001e
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 21:30:18 2014 -0600
+
+    Added documentation. Closes #5
+
+commit 4de133bf677290a01ccf1797c90872b913073338
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 21:29:20 2014 -0600
+
+    Implemented basic dictionary cache. Closes #16
+
+commit 1e75961e0a06f8b33da93aaefae32ebf28045860
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 21:01:24 2014 -0600
+
+    Add comments to collatz_cycles
+
+commit cad1f8af1418be511b079e3202fcb1e05dcafc8e
+Author: Paul Strong <paul@thestrongfamily.org>
+Date:   Thu Jan 30 20:59:01 2014 -0600
+
+    Rename Makefile to makefile
+
+commit 03c3fe682b521b390dcc876b1cbe5ccf6e8d2847
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 20:55:20 2014 -0600
+
+    Created test generator and generated 1000 acceptance tests. Closes #3
+
+commit 92b410c960b9f52bfa636e3f099d8deab6aba8c3
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 20:26:21 2014 -0600
+
+    Submitted and accepted by Sphere. Closes #6
+
+commit aaf598156967d4fa8937ef59d6567ecff322a4ec
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 20:25:41 2014 -0600
+
+    Optimizations to get solution accepted by Sphere. Closes #15
+
+commit 16cb6e527f3ac79ca0b51c1925376d01cbfa0036
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 20:24:31 2014 -0600
+
+    Renamed acceptance tests to use CS username
+
+commit 90bc97ebffa5cfdff053fe8339229666d267d87d
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 19:29:18 2014 -0600
+
+    Completed basic implementation and made all tests green. Closes #8 and #14
+
+commit e7a2e5607f30637996575c60cee6cb91e66d911d
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 19:26:03 2014 -0600
+
+    Cleanup read implementation and add missing tests. Closes #13
+
+commit 6c4f53c37b572f9bae4078a78414f741a4172b2e
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 19:18:58 2014 -0600
+
+    Fixed #12 acceptance tests
+
+commit cbba52492040442f4b4460b18fb32647d2218c57
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 18:57:47 2014 -0600
+
+    Calculate cycle length for single number. Closes #10
+
+commit ee41901689d642da06a775621db5bd4af341f9f3
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 18:56:57 2014 -0600
+
+    Created unit tests for each function to fix #2
+
+commit 1071ed17ed7601e03f6808fd3da35e5cb01f8069
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 10:54:51 2014 -0600
+
+    Add basic acceptance tests by hand. Closes #11
+
+commit fb324cf9d27bed5c43d1edb5d8a5f7c585fecaf8
+Author: Paul Strong <lapluviosilla@gmail.com>
+Date:   Thu Jan 30 10:37:46 2014 -0600
+
+    Finished setting up the git repository with skeleton code. Closes #1
+
+commit aca1ef0d4cff3bd4788a45db8e3d9776829b36cc
+Author: Paul Strong <paul@thestrongfamily.org>
+Date:   Wed Jan 22 20:02:52 2014 -0800
+
+    Initial commit
