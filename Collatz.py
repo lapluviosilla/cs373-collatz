@@ -32,6 +32,9 @@ def collatz_eval (i, j) :
     start = min(i, j)
     end = max(i, j)
     max_cycle_length = 1
+    # Optimization - if start is less than half of end, then max cycle length is same as end/2, end
+    if start < (end >> 1) :
+        start = end >> 1 
     for n in range(start, end+1) :
         cycles = collatz_cycles(n)
         if cycles > max_cycle_length: max_cycle_length = cycles 
@@ -47,10 +50,12 @@ def collatz_cycles (num) :
     cycles = 1
     while(num != 1) :
         if num % 2 == 0:
-            num = num // 2
+            num = num >> 1
+            cycles += 1
         else:
-            num = 3*num + 1
-        cycles += 1
+            # Take two steps in one
+            num = num + (num >> 1) + 1 # (3n + 1) / 2
+            cycles += 2
     assert(cycles > 0)
     return cycles
 
